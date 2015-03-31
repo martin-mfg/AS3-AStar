@@ -54,6 +54,10 @@ package com.yyztom.pathfinding.astar
 		public function remove( node : AStarNodeVO ) : void {
 			var i : int = _content.indexOf(node);
 			
+			if (i == -1) {
+				return;
+			}
+			
 			// When it is found, the process seen in 'pop' is repeated
 			// to fill up the hole.
 			var end : AStarNodeVO = _content.pop();
